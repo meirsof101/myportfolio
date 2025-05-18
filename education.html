@@ -4,52 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - Fidel Mwaro Ngoka</title>
-    <link rel="stylesheet" href="extra.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="dark-mode">
-
+<body>
     <header>
-        <h1>Education</h1>
-        <nav>
-            <ul>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="projects.html">Projects</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="interests.html">Interests</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="contact.html">Contact</a></li>
+        <nav class="navbar">
+            <div class="logo" >
+                <h1>Fidel Ngoka</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">              
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="education">
-        <h2>Academic Qualifications</h2>
-        <div class="edu-item">
-            <h3>Diploma in Agriculture</h3>
-            <p><strong>Kenya Institute of Agriculture</strong> (2015–2018)</p>
-            <p>Specialized in animal diseases and pest management. Conducted research at KALRO.</p>
-        </div>
-    </section>
-
-    <section class="certifications">
-        <h2>Certifications & Training</h2>
-        <ul>
-            <li>Power Learn Project - Software Development (2025)</li>
-            <li>Research Assistant Training - KCEP-CRAL</li>
-        </ul>
-    </section>
-
-    <section class="skills">
-        <h2>Skills & Technologies</h2>
-        <ul>
-            <li>Mobile data collection (ODK, KoBoToolbox)</li>
-            <li>Research & survey methodologies</li>
-            <li>Basic programming (HTML, CSS, JavaScript)</li>
-        </ul>
-    </section>
-
+    <div class="container">
+        <section class="education">
+            <h2>Academic Qualifications</h2>
+            <div class="edu-item">
+                <h3>Diploma in Agriculture</h3>
+                <p><strong>Pwani University</strong> (2015–2018)</p>
+                <p>Specialized in animal diseases and pest management. Conducted extensive research at Kenya Agricultural and Livestock Research Organization (KALRO), focusing on sustainable farming practices and disease prevention strategies in livestock.</p>
+            </div>
+        </section>
+        
+        <section class="certifications">
+            <h2>Certifications & Training</h2>
+            <ul>
+                <li><strong>Power Learn Project</strong> - Software Development (2025)
+                    <p>Comprehensive training in modern web development technologies and best practices for creating responsive and accessible web applications.</p>
+                </li>
+                <li><strong>Research Assistant Training</strong> - Kenya Cereal Enhancement Programme-Climate Resilient Agricultural Livelihoods (KCEP-CRAL)
+                    <p>Specialized training in agricultural data collection, analysis and reporting for climate-resilient farming practices.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="skills">
+            <h2>Skills & Technologies</h2>
+            <ul>
+                <li><strong>Mobile data collection</strong> (ODK, KoBoToolbox)
+                    <p>Proficient in designing and implementing mobile surveys and data collection systems for agricultural research and field operations.</p>
+                </li>
+                <li><strong>Research & survey methodologies</strong>
+                    <p>Experienced in designing research protocols, conducting field surveys, and analyzing qualitative and quantitative agricultural data.</p>
+                </li>
+                <li><strong>Programming</strong> (Python, JavaScript, HTML, CSS)
+                    <p>Developing applications and web solutions with a focus on agricultural and farming needs.</p>
+                </li>
+            </ul>
+        </section> 
+        <section class="my-projects">   
+            <h2>Projects</h2>
+            <div class="calculator-project">
+                <h3>Python Calculator</h3>
+                <p>Developed a Python-based calculator application for agricultural calculations and conversions, helping farmers with various numerical computations related to their farming operations.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Agricultural Tools</span>
+                    <span class="tag">Data Processing</span>
+                </div>
+            </div>
+            
+            <div class="ecommerce-project">
+                <h3>Farm E-Commerce Website</h3>
+                <p>Created an online marketplace connecting local farmers directly with consumers, featuring product listings, secure payment processing, and delivery scheduling for fresh farm products.</p>
+                <div class="tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">E-Commerce</span>
+                    <span class="tag">Agricultural Marketing</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    
     <footer>
-        <p>&copy; 2025 Fidel Mwaro Ngoka</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Fidel Ngoka</h3>
+                    <p>Tech-Savvy Agriculturist dedicated to sustainable farming innovations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="interests.html">Interests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li><i class='bx bx-envelope'></i> fidelmwaro@gmail.com</li>
+                        <li><i class='bx bx-phone'></i> +254 799 328 159</li>
+                        <li><i class='bx bx-map'></i> Kilifi, Kenya</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fidel Ngoka. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

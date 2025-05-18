@@ -4,34 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Fidel Mwaro Ngoka</title>
-    <link rel="stylesheet" href="extra.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Projects</h1>
-        <nav>
-            <ul>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="interests.html">Interests</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="contact.html">Contact</a></li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="education.html">Education</a></li>
+        <nav class="navbar">
+            <div class="logo" >
+                <h1>Fidel Ngoka</h1>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">              
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="interests.html">Interests</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <section>
-        <h2>Featured Projects</h2>
+    <main>
+        <section id="my-projects" class="projects">
+            <h2>Featured Projects</h2>
+            
+            <article class="feat-project">
+                <h3>Python Agricultural Calculator</h3>
+                <p>Developed a comprehensive Python-based calculator application that helps farmers with:</p>
+                <ul>
+                    <li>Crop yield estimations based on land area and historical data</li>
+                    <li>Fertilizer requirement calculations for different crops and soil types</li>
+                    <li>Profit margin analysis considering input costs and market prices</li>
+                    <li>Water requirement estimations for irrigation planning</li>
+                    <li>Feed conversion calculations for livestock management</li>
+                </ul>
+                <p>This tool has been used by over 50 local farmers to optimize their resource allocation and improve productivity.</p>
+                <p><strong>Technologies:</strong> Python, SQLite for data storage, Command-line interface</p>
+            </article>
+            
+            <article class="feat-project">
+                <h3>Farm E-Commerce Platform</h3>
+                <p>Created an online marketplace that connects farmers directly with consumers, eliminating middlemen and improving farmer profits while providing consumers with fresh, locally-sourced agricultural products.</p>
+                <p>Key features include:</p>
+                <ul>
+                    <li>Farmer profiles and product listings with detailed information</li>
+                    <li>Secure payment processing and escrow system</li>
+                    <li>Delivery scheduling and logistics coordination</li>
+                    <li>Rating and review system to build trust</li>
+                    <li>Analytics dashboard for farmers to track sales and customer preferences</li>
+                </ul>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
+            </article>
+            
+            <article class="feat-project">
+                <h3>Farm Management System</h3>
+                <p>A comprehensive web application designed to help farmers manage their operations efficiently, track resources, and monitor productivity remotely.</p>
+                <p>The system includes modules for:</p>
+                <ul>
+                    <li>Crop planning and rotation scheduling</li>
+                    <li>Livestock tracking and health monitoring</li>
+                    <li>Inventory management for seeds, fertilizers, and equipment</li>
+                    <li>Financial record-keeping and expense tracking</li>
+                    <li>Weather integration for informed decision-making</li>
+                    <li>Task management and labor allocation</li>
+                </ul>
+                <p>This system has been implemented on 5 medium-sized farms in Kenya with positive feedback on improved organization and productivity.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Python (Django), PostgreSQL</p>
+            </article>
+            
+            <article class="feat-project">
+                <h3>Agricultural Data Collection Tool</h3>
+                <p>A mobile-friendly application aimed at improving agricultural data collection and analysis for research and farm management. The tool was developed in collaboration with KALRO researchers.</p>
+                <p>Features include:</p>
+                <ul>
+                    <li>Custom survey creation for different agricultural research needs</li>
+                    <li>Offline data collection capability for remote areas</li>
+                    <li>GPS integration for geo-tagging samples and observations</li>
+                    <li>Photo and video documentation capabilities</li>
+                    <li>Data validation to ensure accuracy</li>
+                    <li>Basic statistical analysis and visualization tools</li>
+                    <li>Export functionality in multiple formats (CSV, Excel, JSON)</li>
+                </ul>
+                <p><strong>Technologies:</strong> ODK, KoBoToolbox, Python for data processing</p>
+            </article>
+        </section>
         
-        <h3>Farm Management System</h3>
-        <p>A web application designed to help farmers manage their farms efficiently, track resources, and monitor productivity remotely.</p>
+        <section id="ongoing-projects">
+            <h2>Ongoing Projects</h2>
+            
+            <article class="on-project">
+                <h3>Soil Health Monitoring System</h3>
+                <p>Currently developing a low-cost soil monitoring system that uses sensors to collect data on soil moisture, temperature, and nutrient levels. The system will provide farmers with real-time information and recommendations via a simple mobile interface.</p>
+                <p><strong>Current stage:</strong> Prototype development and field testing</p>
+                <p><strong>Technologies:</strong> Arduino, Soil sensors, Python, Mobile app development</p>
+            </article>
+            
+            <article class="on-project">
+                <h3>Agricultural Knowledge Base</h3>
+                <p>Building a comprehensive, searchable database of agricultural practices, pest management strategies, and crop information tailored to Kenyan farming conditions. The platform will be accessible via web and a basic USSD service for farmers without smartphones.</p>
+                <p><strong>Current stage:</strong> Content development and platform design</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Content Management System</p>
+            </article>
+        </section>
         
-        <h3>Data Collection Tool</h3>
-        <p>A mobile-friendly application aimed at improving agricultural data collection and analysis for research and farm management.</p>
-    </section>
+        <section id="research-projects">
+            <h2>Research Projects</h2>
+            
+            <article class="res-project">
+                <h3>Climate-Resilient Farming Practices Study</h3>
+                <p>Participated in a research project with KCEP-CRAL to document and analyze climate-resilient farming practices across different agro-ecological zones in Kenya. My role included data collection, farmer interviews, and helping analyze the effectiveness of different adaptation strategies.</p>
+                <p><strong>Key outcomes:</strong></p>
+                <ul>
+                    <li>Compiled database of over 30 climate adaptation techniques</li>
+                    <li>Developed assessment framework for technique effectiveness</li>
+                    <li>Co-authored field report used by agricultural extension officers</li>
+                </ul>
+            </article>
+            
+            <article class="res-project">
+                <h3>Mobile Technology Adoption in Rural Farming</h3>
+                <p>Conducted a survey study on factors affecting mobile technology adoption among smallholder farmers. The research identified key barriers and enablers for digital agriculture tools in rural communities.</p>
+                <p><strong>Key findings:</strong></p>
+                <ul>
+                    <li>Literacy levels and interface design significantly impact adoption rates</li>
+                    <li>Peer demonstration is more effective than formal training</li>
+                    <li>Value proposition must be demonstrated within one growing season</li>
+                </ul>
+            </article>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <ul>
+                <li><strong>Mobile data collection</strong> (ODK, KoBoToolbox)
+                    <p>Proficient in designing and implementing mobile surveys and data collection systems for agricultural research and field operations. Experienced in form design, data validation rules, and analysis workflows.</p>
+                </li>
+                <li><strong>Research & survey methodologies</strong>
+                    <p>Experienced in designing research protocols, conducting field surveys, and analyzing qualitative and quantitative agricultural data. Trained in participatory research approaches and farmer-centered design methodologies.</p>
+                </li>
+                <li><strong>Programming</strong> (Python, JavaScript, HTML, CSS)
+                    <p>Developing applications and web solutions with a focus on agricultural and farming needs. Particular strength in data processing scripts and automation of agricultural calculations.</p>
+                </li>
+                <li><strong>GIS and mapping</strong>
+                    <p>Basic proficiency in geographic information systems for agricultural land mapping, soil type visualization, and crop suitability analysis.</p>
+                </li>
+                <li><strong>Project management</strong>
+                    <p>Experience coordinating small teams for agricultural research projects, managing timelines, resources, and stakeholder communications in rural development contexts.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="collaborations">
+            <h2>Collaboration Opportunities</h2>
+            <p>I'm currently looking for collaborators on the following project ideas:</p>
+            <ul>
+                <li><strong>Low-cost weather monitoring network</strong> for smallholder farmers</li>
+                <li><strong>Farmer-to-farmer knowledge sharing platform</strong> with both digital and non-digital components</li>
+                <li><strong>Agricultural credit scoring system</strong> based on farming data and practices</li>
+                <li><strong>Localized crop disease identification tool</strong> using image recognition</li>
+            </ul>
+            <p>If you're interested in collaborating on any of these projects or have ideas related to agricultural technology, please <a href="contact.html">get in touch</a>.</p>
+        </section>
+    </main>
     
     <footer>
-        <p>&copy; 2025 Fidel Mwaro Ngoka. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Fidel Ngoka</h3>
+                    <p>Tech-Savvy Agriculturist dedicated to sustainable farming innovations.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="interests.html">Interests</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li><i class='bx bx-envelope'></i> fidelmwaro@gmail.com</li>
+                        <li><i class='bx bx-phone'></i> +254 799 328 159</li>
+                        <li><i class='bx bx-map'></i> Kilifi, Kenya</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fidel Ngoka. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
