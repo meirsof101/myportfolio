@@ -1,7 +1,8 @@
-import { Download, Github, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Download, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import heroImage from '@/assets/hero-bg.jpg';
+import { Label } from 'recharts';
 
 const Home = () => {
   const [displayedTitle, setDisplayedTitle] = useState('');
@@ -10,15 +11,15 @@ const Home = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const fullTitle = 'Fidel Mwaro Ngoka';
-  const fullSubtitle = 'Fullstack MERN Developer | Freelancer';
+  const fullSubtitle = 'Fullstack MERN Developer | Agricultural Expert';
   const fullTagline = 'Building Digital Solutions for Every Industry';
 
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/fidelmwaro', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/fidelmwaro', label: 'LinkedIn' },
-    { icon: Twitter, href: 'https://twitter.com/fidelmwaro', label: 'Twitter' },
-    { icon: Youtube, href: 'https://youtube.com/@fidelmwaro', label: 'YouTube' }
-  ];
+ const socialLinks = [
+  { icon: Github, href: 'https://github.com/meirsof101', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/', label: 'LinkedIn' },
+  { icon: Twitter, href: 'https://x.com/MrEff796', label: 'Twitter' },
+  { icon: Mail, href: 'mailto:fidelmwaro@gmail.com', label: 'Email'}
+];
 
   useEffect(() => {
     // Cursor blinking effect

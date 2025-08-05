@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/src/assets/profile-photo.jpg" className="flex items-center space-x-2">
             <div className="w-8 h-8 gradient-hero rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">F</span>
             </div>
