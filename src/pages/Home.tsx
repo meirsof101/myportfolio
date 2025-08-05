@@ -1,14 +1,74 @@
 import { Download, Github, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import heroImage from '@/assets/hero-bg.jpg';
 
 const Home = () => {
+  const [displayedTitle, setDisplayedTitle] = useState('');
+  const [displayedSubtitle, setDisplayedSubtitle] = useState('');
+  const [displayedTagline, setDisplayedTagline] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  const fullTitle = 'Fidel Mwaro Ngoka';
+  const fullSubtitle = 'Fullstack MERN Developer | Freelancer';
+  const fullTagline = 'Building Digital Solutions for Every Industry';
+
   const socialLinks = [
     { icon: Github, href: 'https://github.com/fidelmwaro', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/fidelmwaro', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/fidelmwaro', label: 'Twitter' },
     { icon: Youtube, href: 'https://youtube.com/@fidelmwaro', label: 'YouTube' }
   ];
+
+  useEffect(() => {
+    // Cursor blinking effect
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+
+    // Typing effect for title
+    let titleIndex = 0;
+    const titleInterval = setInterval(() => {
+      if (titleIndex <= fullTitle.length) {
+        setDisplayedTitle(fullTitle.slice(0, titleIndex));
+        titleIndex++;
+      } else {
+        clearInterval(titleInterval);
+        
+        // Start subtitle typing after title is complete
+        setTimeout(() => {
+          let subtitleIndex = 0;
+          const subtitleInterval = setInterval(() => {
+            if (subtitleIndex <= fullSubtitle.length) {
+              setDisplayedSubtitle(fullSubtitle.slice(0, subtitleIndex));
+              subtitleIndex++;
+            } else {
+              clearInterval(subtitleInterval);
+              
+              // Start tagline typing after subtitle is complete
+              setTimeout(() => {
+                let taglineIndex = 0;
+                const taglineInterval = setInterval(() => {
+                  if (taglineIndex <= fullTagline.length) {
+                    setDisplayedTagline(fullTagline.slice(0, taglineIndex));
+                    taglineIndex++;
+                  } else {
+                    clearInterval(taglineInterval);
+                    setShowCursor(false);
+                  }
+                }, 50);
+              }, 500);
+            }
+          }, 80);
+        }, 500);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(cursorInterval);
+      clearInterval(titleInterval);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -22,16 +82,25 @@ const Home = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          Fidel Mwaro Ngoka
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 min-h-[80px] md:min-h-[120px]">
+          {displayedTitle}
+          {showCursor && displayedTitle.length < fullTitle.length && (
+            <span className="animate-pulse text-primary-light">|</span>
+          )}
         </h1>
         
-        <h2 className="text-2xl md:text-3xl font-light mb-4 text-blue-100">
-          Fullstack MERN Developer | Agricultural Expert
+        <h2 className="text-2xl md:text-3xl font-light mb-4 text-blue-100 min-h-[40px] md:min-h-[48px]">
+          {displayedSubtitle}
+          {showCursor && displayedSubtitle.length < fullSubtitle.length && displayedTitle.length >= fullTitle.length && (
+            <span className="animate-pulse text-primary-light">|</span>
+          )}
         </h2>
         
-        <p className="text-xl md:text-2xl mb-8 text-blue-50 max-w-2xl mx-auto leading-relaxed">
-          Merging Technology & Agriculture for a Better Tomorrow
+        <p className="text-xl md:text-2xl mb-8 text-blue-50 max-w-2xl mx-auto leading-relaxed min-h-[32px] md:min-h-[40px]">
+          {displayedTagline}
+          {showCursor && displayedTagline.length < fullTagline.length && displayedSubtitle.length >= fullSubtitle.length && (
+            <span className="animate-pulse text-primary-light">|</span>
+          )}
         </p>
 
         {/* CTA Buttons */}
